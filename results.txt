@@ -1,0 +1,116 @@
+Pattern 1
+Process 1 (13263) beginning
+Process 2 (13264) beginning
+Process 3 (13265) beginning
+Process 4 (13266) beginning
+Process 5 (13267) beginning
+Process 6 (13268) beginning
+Process 7 (13269) beginning
+Process 1 (13263) exiting
+Process 3 (13265) exiting
+Process 2 (13264) exiting
+Process 6 (13268) exiting
+Process 7 (13269) exiting
+Process 4 (13266) exiting
+Process 5 (13267) exiting
+
+Pattern 2
+process 1 (13371) beginning
+Process 1 (13371) creating Process 2 (13427)
+process 2 (13427) beginning
+Process 2 (13427) creating Process 3 (13473)
+process 3 (13473) beginning
+Process 3 (13473) creating Process 4 (13488)
+process 4 (13488) beginning
+Process 4 (13488) creating Process 5 (13517)
+process 5 (13517) beginning
+Process 5 (13517) creating Process 6 (13531)
+process 6 (13531) beginning
+Process 6 (13531) creating Process 7 (13587)
+process 7 (13587) beginning
+Process 7 (13587) exiting
+Process 6 (13531) exiting
+Process 5 (13517) exiting
+Process 4 (13488) exiting
+Process 3 (13473) exiting
+Process 2 (13427) exiting
+Process 1 (13371) exiting
+
+Pattern 1
+Process 1 (13986) beginning
+Process 2 (13987) beginning
+Process 3 (13988) beginning
+Process 4 (13989) beginning
+Process 5 (13990) beginning
+Process 6 (13991) beginning
+Process 8 (13993) beginning
+Process 7 (13992) beginning
+Process 9 (13994) beginning
+Process 10 (13995) beginning
+Process 11 (13996) beginning
+Process 14 (13999) beginning
+Process 12 (13997) beginning
+Process 13 (13998) beginning
+Process 15 (14000) beginning
+Process 3 (13988) exiting
+Process 2 (13987) exiting
+Process 1 (13986) exiting
+Process 7 (13992) exiting
+Process 14 (13999) exiting
+Process 5 (13990) exiting
+Process 11 (13996) exiting
+Process 15 (14000) exiting
+Process 6 (13991) exiting
+Process 8 (13993) exiting
+Process 4 (13989) exiting
+Process 9 (13994) exiting
+Process 12 (13997) exiting
+Process 10 (13995) exiting
+Process 13 (13998) exiting
+
+Pattern 2
+process 1 (14158) beginning
+Process 1 (14158) creating Process 2 (14218)
+process 2 (14218) beginning
+Process 2 (14218) creating Process 3 (14264)
+process 3 (14264) beginning
+Process 3 (14264) creating Process 4 (14279)
+process 4 (14279) beginning
+Process 4 (14279) creating Process 5 (14308)
+process 5 (14308) beginning
+Process 5 (14308) creating Process 6 (14322)
+process 6 (14322) beginning
+Process 6 (14322) creating Process 7 (14372)
+process 7 (14372) beginning
+Process 7 (14372) creating Process 8 (14397)
+process 8 (14397) beginning
+Process 8 (14397) creating Process 9 (14430)
+process 9 (14430) beginning
+Process 9 (14430) creating Process 10 (14444)
+process 10 (14444) beginning
+Process 10 (14444) creating Process 11 (14487)
+process 11 (14487) beginning
+Process 11 (14487) creating Process 12 (14505)
+process 12 (14505) beginning
+Process 12 (14505) creating Process 13 (14535)
+process 13 (14535) beginning
+Process 13 (14535) creating Process 14 (14560)
+process 14 (14560) beginning
+Process 14 (14560) creating Process 15 (14582)
+process 15 (14582) beginning
+Process 15 (14582) exiting
+Process 14 (14560) exiting
+Process 13 (14535) exiting
+Process 12 (14505) exiting
+Process 11 (14487) exiting
+Process 10 (14444) exiting
+Process 9 (14430) exiting
+Process 8 (14397) exiting
+Process 7 (14372) exiting
+Process 6 (14322) exiting
+Process 5 (14308) exiting
+Process 4 (14279) exiting
+Process 3 (14264) exiting
+Process 2 (14218) exiting
+Process 1 (14158) exiting
+
