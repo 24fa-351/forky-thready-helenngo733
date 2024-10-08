@@ -13,10 +13,10 @@ int main(int argc, char *argv[]) {
     }
 
     if (pattern_num == 1) {
-        printf("Pattern 1\n");
+        fprintf(stderr, "Pattern 1\n");
         pattern_1(num_of_things);
     } else if (pattern_num == 2) {
-        printf("Pattern 2\n");
+        fprintf(stderr, "Pattern 2\n");
         pattern_2(num_of_things);
     } else {
         printf("pattern must be 1 or 2\n");
@@ -25,3 +25,6 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+//Note to self: To capture exact output to results.txt do 
+//  ./main <arguments> results.txt 2>&1  
