@@ -23,36 +23,39 @@ void pattern_1(int num_of_things) {
             exit(0);  // end the child process
         }
     }
-    for (int ix = 1; ix <= num_of_things; ++ix) {
-        wait(NULL);  // wait for all children to finish
-    }
+    for (int ix = 1; ix <= num_of_things; ++ix) wait(NULL);  // wait for all children to finish
     fprintf(stderr, "\n");
+}
+
+void pattern_2_child(int num_of_process, int num_of_things) {
+    fprintf(stderr, "process %d (%d) beginning\n", num_of_process, getpid());
+    random_sleep();
+
+    if (num_of_process < num_of_things) {  // Create next process
+        pid_t child_pid = fork();
+        if (child_pid == 0) {
+            pattern_2_child(num_of_process + 1, num_of_things);
+        } else if (child_pid > 0) {
+            fprintf(stderr, "Process %d (%d) creating Process %d (%d)\n", num_of_process,
+                    getpid(), num_of_process + 1, child_pid);
+            wait(NULL);  // Wait for child to finish
+            fprintf(stderr, "Process %d (%d) exiting\n", num_of_process, getpid());
+            exit(0);
+        }
+    } else {
+        fprintf(stderr, "Process %d (%d) exiting\n", num_of_process, getpid());
+        exit(0);
+    }
 }
 
 void pattern_2(int num_of_things) {
     pid_t pid = fork();
     if (pid == 0) {
-        for (int ix = 1; ix <= num_of_things; ix++) {
-            fprintf(stderr, "process %d (%d) beginning\n", ix, getpid());
-            random_sleep();
-
-            if (ix < num_of_things) {  // Create next process
-                pid_t child_pid = fork();
-                if (child_pid == 0) {
-                    continue;
-                } else if (child_pid > 0) {
-                    fprintf(stderr, "Process %d (%d) creating Process %d (%d)\n", ix, getpid(), ix + 1, child_pid);
-                    wait(NULL);  // Wait for child to finish
-                    fprintf(stderr, "Process %d (%d) exiting\n", ix, getpid());
-                    exit(0);
-                }
-            } else {
-                fprintf(stderr, "Process %d (%d) exiting\n", ix, getpid());
-                exit(0);
-            }
-        }
+        pattern_2_child(1, num_of_things);
     } else if (pid > 0) {
         wait(NULL);
+    } else {
+        perror("fork");
+        exit(1);
     }
-    fprintf(stderr, "\n");
 }
